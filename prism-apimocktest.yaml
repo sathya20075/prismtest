@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: prism-mocktest-deployment
+  labels:
+    app: prismapimocktest
+spec:
+  replicas: 1
+  containers:
+    - name: prismapimocktest
+      image: sathya20075/prismapitest:5.0
+      ports:
+        - containerPort: 4010
+    - name: prismrunapimocktest
+      image: sathya20075/prismnewmanapitest:3.0
+      ports:
+        - containerPort: 7002
+        
+-----
+
+apiVersion: v1
+kind: Service
+metadata:
+   name: prismapi-mocktest-service
+spec:
+   selector:
+      app: prismapimocktest
+   ports:
+      - protocol: TCP
+        port: 4011
+        targetPort: 4010
