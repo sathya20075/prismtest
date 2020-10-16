@@ -13,7 +13,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
-          kubernetesDeploy(configs: "prism-apimocktest.yml", kubeconfigId: "mykubeconfig")
+          kubernetesDeploy(configs: "prism-apimocktest.yml", kubeconfigId: "kubconfig")
         }
       }
     }
