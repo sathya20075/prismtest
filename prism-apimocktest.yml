@@ -5,8 +5,7 @@ metadata:
   name: prism-mocktest-deployment
   labels:
     app: prismapimocktest
-spec:
-  replicas: 1
+spec:  
   containers:
     - name: prismapimocktest
       image: sathya20075/prismapitest:5.0
