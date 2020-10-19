@@ -12,7 +12,7 @@ spec:
       ports:
         - containerPort: 4010
     - name: prismrunapimocktest
-      image: sathya20075/prismnewmanapitest:5.0
+      image: sathya20075/prismnewmanapitest:6.0
       ports:
         - containerPort: 7002
         
