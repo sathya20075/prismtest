@@ -11,17 +11,20 @@ spec:
       image: sathya20075/prismapitest:5.0
       ports:
         - containerPort: 4010
+      volumeMounts:
+        - name: prismdata
+          mountPath: /var/prismapidata
     - name: prismrunapimocktest
       image: sathya20075/prismnewmanapitest:6.0
       ports:
         - containerPort: 7002
       volumeMounts:
-        - name: dockersock
-          mountPath: /var/tmp/containersharedloc
+        - name: prismdata
+          mountPath: /var/prismapitestdata
   volumes:
-    - name: dockersock
+    - name: prismdata
       hostPath: 
-        path: /var/tmp/containersharedloc
+        path: /mnt/prismdata
 ---
 apiVersion: v1
 kind: Service
