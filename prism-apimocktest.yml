@@ -15,8 +15,16 @@ spec:
       image: sathya20075/prismnewmanapitest:6.0
       ports:
         - containerPort: 7002
+      volumeMounts:
+      - name: dockersock
+        mountPath: "/var/tmp/containersharedloc"
         
   restartPolicy: Always
+  volumes:
+    - name: dockersock
+      hostpath: 
+        path: /var/tmp/containersharedloc
+        
         
 ---
 apiVersion: v1
