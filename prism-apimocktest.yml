@@ -16,8 +16,8 @@ spec:
       ports:
         - containerPort: 7002
       volumeMounts:
-      - name: dockersock
-        mountPath: "/var/tmp/containersharedloc"
+        - name: dockersock
+          mountPath: /var/tmp/containersharedloc
         
   restartPolicy: Always
   volumes:
