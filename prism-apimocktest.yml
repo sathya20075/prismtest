@@ -15,7 +15,7 @@ spec:
         - name: prismdata
           mountPath: /var/prismapidata
     - name: prismrunapimocktest
-      image: sathya20075/prismnewmanapitest:6.0
+      image: sathya20075/prismnewmanapitest:7.0
       ports:
         - containerPort: 7002
       volumeMounts:
