@@ -22,7 +22,7 @@ spec:
   restartPolicy: Always
   volumes:
     - name: dockersock
-      hostpath: 
+      hostPath: 
         path: /var/tmp/containersharedloc
         
         
