@@ -18,14 +18,10 @@ spec:
       volumeMounts:
         - name: dockersock
           mountPath: /var/tmp/containersharedloc
-        
-  restartPolicy: Always
   volumes:
     - name: dockersock
       hostPath: 
         path: /var/tmp/containersharedloc
-        
-        
 ---
 apiVersion: v1
 kind: Service
